@@ -1,0 +1,88 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/v0.10.35/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/v0.10.35/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 warn package.json SalesforceGitDeploy@0.0.0 No repository field.
+5 warn package.json SalesforceGitDeploy@0.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/ubuntu/workspace/SalesforceGitDeploy',
+7 verbose install   [ 'express', 'gift', 'requirejs' ] ]
+8 info preinstall SalesforceGitDeploy@0.0.0
+9 verbose readDependencies using package.json deps
+10 verbose already installed skipping express@~4.9.x /home/ubuntu/workspace/SalesforceGitDeploy
+11 verbose cache add [ 'gift@3.1.4', null ]
+12 verbose cache add name=undefined spec="gift@3.1.4" args=["gift@3.1.4",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'gift@3.1.4',
+13 verbose parsed url   path: 'gift@3.1.4',
+13 verbose parsed url   href: 'gift@3.1.4' }
+14 verbose already installed skipping requirejs@~2.1.8 /home/ubuntu/workspace/SalesforceGitDeploy
+15 verbose cache add name="gift" spec="3.1.4" args=["gift","3.1.4"]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: '3.1.4',
+16 verbose parsed url   path: '3.1.4',
+16 verbose parsed url   href: '3.1.4' }
+17 verbose addNamed [ 'gift', '3.1.4' ]
+18 verbose addNamed [ '3.1.4', '3.1.4' ]
+19 silly lockFile f232ad06-gift-3-1-4 gift@3.1.4
+20 verbose lock gift@3.1.4 /home/ubuntu/.npm/f232ad06-gift-3-1-4.lock
+21 verbose request where is /gift
+22 verbose request registry https://registry.npmjs.org/
+23 verbose request id ab35f627c289a409
+24 verbose url raw /gift
+25 verbose url resolving [ 'https://registry.npmjs.org/', './gift' ]
+26 verbose url resolved https://registry.npmjs.org/gift
+27 verbose request where is https://registry.npmjs.org/gift
+28 info trying registry request attempt 1 at 18:22:20
+29 http GET https://registry.npmjs.org/gift
+30 http 200 https://registry.npmjs.org/gift
+31 silly registry.get cb [ 200,
+31 silly registry.get   { date: 'Fri, 20 Feb 2015 18:22:21 GMT',
+31 silly registry.get     server: 'CouchDB/1.6.1 (Erlang OTP/R14B04)',
+31 silly registry.get     etag: '"D6AVAR8IHEC68MWBRKHFTJK84"',
+31 silly registry.get     'content-type': 'application/json',
+31 silly registry.get     'cache-control': 'max-age=60',
+31 silly registry.get     'content-length': '33868',
+31 silly registry.get     'accept-ranges': 'bytes',
+31 silly registry.get     via: '1.1 varnish',
+31 silly registry.get     age: '0',
+31 silly registry.get     'x-served-by': 'cache-ams4122-AMS',
+31 silly registry.get     'x-cache': 'MISS',
+31 silly registry.get     'x-cache-hits': '0',
+31 silly registry.get     'x-timer': 'S1424456540.941461,VS0,VE189',
+31 silly registry.get     vary: 'Accept',
+31 silly registry.get     'keep-alive': 'timeout=10, max=50',
+31 silly registry.get     connection: 'Keep-Alive' } ]
+32 silly lockFile f232ad06-gift-3-1-4 gift@3.1.4
+33 silly lockFile f232ad06-gift-3-1-4 gift@3.1.4
+34 error Error: version not found: gift@3.1.4
+34 error     at /home/ubuntu/.nvm/v0.10.35/lib/node_modules/npm/lib/cache/add-named.js:125:12
+34 error     at saved (/home/ubuntu/.nvm/v0.10.35/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:167:7)
+34 error     at Object.oncomplete (fs.js:108:15)
+35 error If you need help, you may report this *entire* log,
+35 error including the npm and node versions, at:
+35 error     <http://github.com/npm/npm/issues>
+36 error System Linux 3.14.13-c9
+37 error command "/home/ubuntu/.nvm/v0.10.35/bin/node" "/home/ubuntu/.nvm/v0.10.35/bin/npm" "install"
+38 error cwd /home/ubuntu/workspace/SalesforceGitDeploy
+39 error node -v v0.10.35
+40 error npm -v 1.4.28
+41 verbose exit [ 1, true ]
