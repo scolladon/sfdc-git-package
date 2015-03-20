@@ -16,7 +16,7 @@ function(gitDiff,config,pack,fs){
                 if(err) {console.log(err);return;}
                 fs.writeFile(config.package, xml.end({ pretty: true, indent: '  ', newline: '\n' }), function(err) {
                     if(err) {console.log(err);}
-                    console.log('Check the '+ config.package +' file');
+                    console.log('Check the '+ config.package +' file ;)');
                 }); 
             });
         });
