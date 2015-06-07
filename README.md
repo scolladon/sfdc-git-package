@@ -1,6 +1,17 @@
-  _________      .__                   _____                            ________.__  __ ________                .__                
- /   _____/____  |  |   ____   _______/ ____\___________   ____  ____  /  _____/|__|/  |\______ \   ____ ______ |  |   ____ ___.__.
- \_____  \\__  \ |  | _/ __ \ /  ___/\   __\/  _ \_  __ \_/ ___\/ __ \/   \  ___|  \   __\    |  \_/ __ \\____ \|  |  /  _ <   |  |
- /        \/ __ \|  |_\  ___/ \___ \  |  | (  <_> )  | \/\  \__\  ___/\    \_\  \  ||  | |    `   \  ___/|  |_> >  |_(  <_> )___  |
-/_______  (____  /____/\___  >____  > |__|  \____/|__|    \___  >___  >\______  /__||__|/_______  /\___  >   __/|____/\____// ____|
-        \/     \/          \/     \/                          \/    \/        \/                \/     \/|__|               \/     
+# Salesforce Git Packager
+
+Create the package.xml from two git commit.
+
+## Content
+* ApexClass
+* Visualforce Page
+* Visualforce Component
+* Static Resource
+* Trigger
+
+## Further Improvements
+* Custom Field
+* Custom Object
+* Custom Label
+* Custom Settings
+* Email Template
