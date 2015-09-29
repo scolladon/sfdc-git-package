@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "~4.9.x",
     "requirejs": "~2.1.8",
-    "xmlbuilder": "~2.6.1"
+    "xmlbuilder": "~2.6.1",
+    "promise" : "7.0.4"
   },
   "repository": { 
     "type": "git",
