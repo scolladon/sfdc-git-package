@@ -26,19 +26,3 @@ function(gitDiff,config,pack,fs,Promise){
     .catch(function(err){console.log(err)})
     .done(function(res){console.log(res)});
 });
-
-/*
-var package = {
-	'types': {
-		'members': 'AP01_UserTrigger',
-		'name' : 'ApexClass'
-	},
-	'version': '30.0'
-};
- conn.metadata.retrieve({ unpackaged: package })
- .complete(function(err, result) {
-	if (err) { console.error(err); }
-	console.log('done ? :' + result);
-	console.log(result);
-});
-*/
