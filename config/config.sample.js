@@ -12,8 +12,8 @@ r.define({
         git clone yourrepo
         git config core.quotepath off
         git config core.autocrlf true
-        git config i18n.logoutputencoding utf8                                                                                                                                
-        git config --unset svn.pathnameencoding  
-        
+        git config i18n.logoutputencoding utf8
+        git config --unset svn.pathnameencoding
+
     */
 });
