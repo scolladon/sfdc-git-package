@@ -13,3 +13,4 @@ Create the package.xml from two git commit.
 * Allow to push on environments
 * Destructive on in file metadata
 * Remember last commit changed and new head to do the diff
+* use the idea https://github.com/Orbs/git-download
