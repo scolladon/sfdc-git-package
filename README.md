@@ -9,9 +9,6 @@ Create the package.xml from two git commit.
 * Static Resource
 * Trigger
 
-## Further Improvements
-* Custom Field
-* Custom Object
-* Custom Label
-* Custom Settings
-* Email Template
+## TODO
+* Allow to push on environments
+* Destructive on in file metadata
