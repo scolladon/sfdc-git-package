@@ -12,3 +12,4 @@ Create the package.xml from two git commit.
 ## TODO
 * Allow to push on environments
 * Destructive on in file metadata
+* Remember last commit changed and new head to do the diff
