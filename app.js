@@ -1,11 +1,11 @@
 var r = require("requirejs");
 
 r.config({
-    nodeRequire: require
+  nodeRequire: require
 });
 
 r(["lib/orchestrator.js","commander","./package.json"],
-function(orch,program,pjson){
+function(orchestrator,program,pjson){
 
 	program
 		.version(pjson.version)
@@ -17,14 +17,6 @@ function(orch,program,pjson){
 		.option('-r, --repo [dir]', 'git repository location [./repo]', './repo')
 		.parse(process.argv);
 
-	console.log(program.output);
-	orch(program);
+	orchestrator(program);
 
-	/*
-    repo : "./repo",
-    branch : "master",
-    commitFrom : "eeebc831103252d253601530bf284da8bf1ea710",
-    commitTo : "HEAD",
-    version : "36.0"
-	*/
 });
