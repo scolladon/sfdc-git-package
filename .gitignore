@@ -1,4 +1,5 @@
 repo
+output
 node_modules
 package.xml
 config/config.js

@@ -1,14 +1,16 @@
 {
   "name": "SalesforceGitDeploy",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Create Package.xml from git",
+  "keyword": ["salesforce","package","git"],
   "main": "",
   "repository": "",
   "author": "",
   "dependencies": {
     "requirejs": "~2.1.8",
     "xmlbuilder": "~2.6.1",
-    "promise" : "7.0.4"
+    "promise" : "7.0.4",
+    "commander" : "2.9.0"
   },
   "repository": { 
     "type": "git",
@@ -16,5 +18,6 @@
   },
   "engines": {
     "node": "0.10.x"
-  }
+  },
+  "licence" : "MIT"
 }
