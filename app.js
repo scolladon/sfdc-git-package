@@ -9,7 +9,6 @@ function(orchestrator,program,pjson){
 
 	program
 		.version(pjson.version)
-		.option('-b, --branch [name]', 'branch on which the diff is done [master]', 'master')
 		.option('-t, --to [sha]', 'commit sha from where the diff is done [HEAD]', 'HEAD')
 		.option('-f, --from [sha]', 'commit sha from where the diff is done [git rev-list --max-parents=0 HEAD]', '')
 		.option('-o, --output [dir]', 'package.xml specific output [./output]', './output')
