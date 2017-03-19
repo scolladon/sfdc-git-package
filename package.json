@@ -1,23 +1,28 @@
 {
-  "name": "SalesforceGitDeploy",
-  "version": "0.1.0",
-  "description": "Create Package.xml from git",
-  "keyword": ["salesforce","package","git"],
-  "main": "",
-  "repository": "",
-  "author": "",
-  "dependencies": {
-    "requirejs": "~2.1.8",
-    "xmlbuilder": "~2.6.1",
-    "promise" : "7.0.4",
-    "commander" : "2.9.0"
+  "name": "sfdc-git-package",
+  "version": "1.0.0",
+  "description": "Create Package.xml and destructiveChangesPre.xml from git diff between two commits",
+  "keyword": [
+    "salesforce",
+    "package",
+    "git",
+    "cli"
+  ],
+  "main": "index.js",
+  "bin": {
+    "sgp": "./bin/cli"
   },
-  "repository": { 
+  "repository": {
     "type": "git",
-    "url": "https://ForceComDeveloper@github.com/ForceComDeveloper/SalesforceGitPackager.git"
+    "url": "https://ForceComDeveloper@github.com/scolladon/sfdc-git-package.git"
+  },
+  "author": "Sebastien Colladon <colladonsebastien@gmail.com>",
+  "dependencies": {
+    "commander": "2.9.0",
+    "xmlbuilder": "~2.6.1"
   },
   "engines": {
     "node": "0.10.x"
   },
-  "licence" : "MIT"
+  "license": "MIT"
 }
