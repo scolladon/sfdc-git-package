@@ -5,3 +5,5 @@ package.xml
 config/config.js
 .yarnclean
 yarn.lock
+
+/npm-debug.log
