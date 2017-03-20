@@ -25,7 +25,7 @@ yarn globally add sfdc-git-package
 
 ## Usage
 
-###Command Line
+### Command Line
 
 ```
 $ sgp -h
