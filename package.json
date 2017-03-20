@@ -19,6 +19,7 @@
   "author": "Sebastien Colladon <colladonsebastien@gmail.com>",
   "dependencies": {
     "commander": "2.9.0",
+    "nodegit-kit": "^0.15.0",
     "xmlbuilder": "~2.6.1"
   },
   "license": "MIT"

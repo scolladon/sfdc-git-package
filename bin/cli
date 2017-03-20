@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-var program = require('commander');
-var orchestrator = require('../index.js');
-var pjson = require('../package.json');
+const program = require('commander');
+const orchestrator = require('../index.js');
+const pjson = require('../package.json');
 
 
 program
@@ -15,4 +15,4 @@ program
   .option('-r, --repo [dir]', 'git repository location [./repo]', './repo')
   .parse(process.argv);
 
-orchestrator(program);
+orchestrator(program, console.log);

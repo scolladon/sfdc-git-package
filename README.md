@@ -56,13 +56,14 @@ $ sgp -h
     'output':'', // package.xml & destructiveChangesPre.xml specific output. Default : ./output
     'apiVersion':'', // salesforce API version. Default : 39.0
     'repo':'' // git repository location. Default : ./repo
-  });
+  }, console.log);
 ```
 
 
 ## Built With
 
 * [commander](https://github.com/tj/commander.js/) - The complete solution for node.js command-line interfaces, inspired by Ruby's commander.
+* [nodegit-kit](https://github.com/thisconnect/nodegit-kit) - Complementary NodeGit helpers returning native Promises, helps with git commands such as init, add, commit, status, diff.
 * [xmlbuilder](https://github.com/oozcitak/xmlbuilder-js) - An XML builder for node.js similar to java-xmlbuilder.
 
 ## Versioning
