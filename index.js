@@ -1,16 +1,35 @@
-var program = require('commander');
-var orchestrator = require('./lib/orchestrator.js');
-var pjson = require('./package.json');
+var gitDiff = require('./lib/gitDiffHandler.js');
+var pack = require('./lib/packageConstructor');
+var fileUtils = require('./lib/utils/fileUtils');
+
+/*
+var config = {
+  'to':'', // commit sha to where the diff is done. Default : HEAD
+  'from':'', // commit sha from where the diff is done. Default : git rev-list --max-parents=0 HEAD
+  'output':'', // package.xml & destructiveChangesPre.xml specific output. Default : ./output
+  'apiVersion':'', // salesforce API version. Default : 39.0
+  'repo':'' // git repository location. Default : ./repo
+}
+*/
 
 
-program
-	.description(pjson.description)
-	.version(pjson.version)
-	.option('-t, --to [sha]', 'commit sha to where the diff is done [HEAD]', 'HEAD')
-	.option('-f, --from [sha]', 'commit sha from where the diff is done [git rev-list --max-parents=0 HEAD]', '')
-	.option('-o, --output [dir]', 'package.xml specific output [./output]', './output')
-	.option('-a, --api-version [version]', 'salesforce API version [37.0]', '37.0')
-	.option('-r, --repo [dir]', 'git repository location [./repo]', './repo')
-	.parse(process.argv);
+var orchestrator = function(config) {
 
-orchestrator(program);
+  var git = new gitDiff(config);
+  var pc = new pack(config);
+  var fu = new fileUtils(config);
+
+  git.diff()
+  .then(pc.constructPackage)
+  .then(fu.writeAsync)
+  .then(function(res){
+    if(res){
+      res.forEach(function(name){
+        console.log(name + ' created');
+      });
+    }
+  })
+  .catch(function(err){console.error(err)})
+}
+
+module.exports = orchestrator;

@@ -25,6 +25,8 @@ yarn globally add sfdc-git-package
 
 ## Usage
 
+###Command Line
+
 ```
 $ sgp -h
 
@@ -41,6 +43,20 @@ $ sgp -h
     -o, --output [dir]           package.xml specific output [./output]
     -a, --api-version [version]  salesforce API version [37.0]
     -r, --repo [dir]             git repository location [./repo]
+```
+
+### Module
+
+```
+  var sgp = require('sfdc-git-package');
+
+  sgp({
+    'to':'', // commit sha to where the diff is done. Default : HEAD
+    'from':'', // commit sha from where the diff is done. Default : git rev-list --max-parents=0 HEAD
+    'output':'', // package.xml & destructiveChangesPre.xml specific output. Default : ./output
+    'apiVersion':'', // salesforce API version. Default : 39.0
+    'repo':'' // git repository location. Default : ./repo
+  });
 ```
 
 
