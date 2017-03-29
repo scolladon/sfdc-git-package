@@ -1,6 +1,6 @@
 {
   "name": "sfdc-git-package",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Create Package.xml and destructiveChangesPre.xml from git diff between two commits",
   "keyword": [
     "salesforce",
