@@ -4,6 +4,15 @@ const fileUtils = require('./lib/utils/fileUtils');
 
 module.exports = function(config, logger) {
 
+  if(typeof config.to === 'undefined' || config.to === null
+  || typeof config.from === 'undefined' || config.from === null
+  || typeof config.apiVersion === 'undefined' || config.apiVersion === null
+  || typeof config.output === 'undefined' || config.output === null
+  || typeof config.repo === 'undefined' || config.repo === null) {
+    logger('Not enough config options');
+    return;
+  }
+
   const git = new gitDiff(config);
   const pc = new pack(config);
   const fu = new fileUtils(config);
