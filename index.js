@@ -4,17 +4,8 @@ const fileUtils = require('./lib/utils/fileUtils');
 
 module.exports = function(config, logger) {
 
-  if (typeof config.diff === 'undefined' || config.diff === null) {
-    if (!(
-          typeof config.to === 'undefined' || config.to === null
-          || typeof config.from === 'undefined' || config.from === null
-        )
-    ) {
-      config.diff = '' + config.from + '..' + config.to;
-    }
-  }
-
-  if(typeof config.diff === 'undefined' || config.diff === null
+  if(typeof config.to === 'undefined' || config.to === null
+  || typeof config.from === 'undefined' || config.from === null
   || typeof config.apiVersion === 'undefined' || config.apiVersion === null
   || typeof config.output === 'undefined' || config.output === null
   || typeof config.repo === 'undefined' || config.repo === null) {
