@@ -15,4 +15,7 @@ program
   .option('-r, --repo [dir]', 'git repository location [./repo]', './repo')
   .parse(process.argv);
 
-orchestrator(program, console.log);
+orchestrator(program, console.log)
+.catch(function(err){
+  console.log(err);
+});

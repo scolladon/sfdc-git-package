@@ -4,28 +4,32 @@ const fileUtils = require('./lib/utils/fileUtils');
 
 module.exports = function(config, logger) {
 
-  if(typeof config.to === 'undefined' || config.to === null
-  || typeof config.from === 'undefined' || config.from === null
-  || typeof config.apiVersion === 'undefined' || config.apiVersion === null
-  || typeof config.output === 'undefined' || config.output === null
-  || typeof config.repo === 'undefined' || config.repo === null) {
-    logger('Not enough config options');
-    return;
-  }
+  return new Promise(function (resolve, reject) {
 
-  const git = new gitDiff(config);
-  const pc = new pack(config);
-  const fu = new fileUtils(config);
-
-  git.diff()
-  .then(pc.constructPackage)
-  .then(fu.writeAsync)
-  .then(function(res){
-    if(res){
-      res.forEach(function(name){
-        logger(name + ' created');
-      });
+    if(typeof config.to === 'undefined' || config.to === null
+    || typeof config.from === 'undefined' || config.from === null
+    || typeof config.apiVersion === 'undefined' || config.apiVersion === null
+    || typeof config.output === 'undefined' || config.output === null
+    || typeof config.repo === 'undefined' || config.repo === null) {
+      logger('Not enough config options');
+      return;
     }
-  })
-  .catch(function(err){logger(err)})
+
+    const git = new gitDiff(config);
+    const pc = new pack(config);
+    const fu = new fileUtils(config);
+
+    git.diff()
+    .then(pc.constructPackage)
+    .then(fu.writeAsync)
+    .then(function(res){
+      if(res){
+        res.forEach(function(name){
+          logger(name + ' created');
+        });
+      }
+      resolve();
+    })
+    .catch(function(err){reject(err)})
+  });
 };
