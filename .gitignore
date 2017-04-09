@@ -1,9 +1,6 @@
 repo
 output
 node_modules
-package.xml
-config/config.js
 .yarnclean
 yarn.lock
-
-/npm-debug.log
+npm-debug.log
