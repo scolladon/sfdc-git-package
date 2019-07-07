@@ -13,6 +13,7 @@ program
   .option('-o, --output [dir]', 'package.xml & destructiveChangesPre.xml specific output [./output]', './output')
   .option('-a, --api-version [version]', 'salesforce API version [39.0]', '39.0')
   .option('-r, --repo [dir]', 'git repository location [./repo]', './repo')
+  .option('-c, --clean', 'clean up sources ?')
   .parse(process.argv);
 
 orchestrator(program)

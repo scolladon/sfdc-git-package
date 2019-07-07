@@ -14,6 +14,7 @@ module.exports = (config) => {
     || typeof config.repo === 'undefined') {
       return reject('Not enough config options');
     }
+    
 
     const git = new GitDiffHandler(config);
     const pc = new PackageConstructor(config);
