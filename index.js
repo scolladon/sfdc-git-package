@@ -7,11 +7,11 @@ module.exports = (config) => {
 
   return new Promise((resolve, reject) => {
 
-    if(typeof config.to === 'undefined' || config.to === null
-    || typeof config.from === 'undefined' || config.from === null
-    || typeof config.apiVersion === 'undefined' || config.apiVersion === null
-    || typeof config.output === 'undefined' || config.output === null
-    || typeof config.repo === 'undefined' || config.repo === null) {
+    if(typeof config.to === 'undefined'
+    || typeof config.from === 'undefined'
+    || typeof config.apiVersion === 'undefined'
+    || typeof config.output === 'undefined'
+    || typeof config.repo === 'undefined') {
       return reject('Not enough config options');
     }
 
